@@ -51,7 +51,7 @@ let arraySize = document.querySelector('#arr_sz');
 
 arraySize.addEventListener('input', function(){
     console.log(arraySize.ariaValueMax, typeof(arraySize.value));
-    createNewArray(parsetInt(arraySize.value));
+    createNewArray(parseInt(arraySize.value));
 });
 
 let delay = 260;
@@ -59,14 +59,14 @@ let delayElement = document.querySelector('#speed_input');
 
 delayElement.addEventListener('input', function(){
     console.log(delayElement.value, typeof(delayElement.value));
-    delay = 320 - parsentInt(delayElement.value);
+    delay = 320 - parseInt(delayElement.value);
 });
 
 let array = [];
 
 createNewArray();
 
-function createNewArray(no0fBars = 60){
+function createNewArray(noOfBars = 60){
     deleteChild();
 
     array = [];
